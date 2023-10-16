@@ -1,9 +1,9 @@
 
-#Hola a todos#
+# Hola a todos #
 
 Hola a todos hoy les traigo un minitutorial para poder utilizar JWT en Express y Node
 
-##Instalación##
+## Instalación ##
 
 Instalamos con npm ejecutando el comando 
 npm install jsonwebtoken
@@ -21,15 +21,15 @@ npm install crypto dotenv express
 
 
 
-###crypto###
+### crypto ###
 
 Este módulo permite a los desarrolladores trabajar con operaciones criptográficas, como el cifrado y descifrado de datos, la generación de claves, la creación de resúmenes criptográficos (hashes) y más.
 
 Este modulo lo utilizaremos para crear una clave para JWT para ello utilizaremos un metodo llamado randomBytes() el cual genera una secuencia de bytes aleatorios de longitud 64 utilizando una fuente de números aleatorios seguros proporcionada por la biblioteca criptográfica de Node.js. Los bytes generados son aleatorios y se consideran seguros para su uso en aplicaciones que requieren datos aleatorios, como claves criptográficas, tokens de autenticación, números de sesión y más.
 
 
-###dotenv###
-
+### dotenv ###
+ 
 La dependencia dotenv es una herramienta comúnmente utilizada en aplicaciones Node.js para cargar variables de entorno desde un archivo llamado .env en el entorno de desarrollo. Estas variables de entorno suelen contener información sensible o configuración específica de la aplicación, como credenciales de bases de datos, claves de API, configuraciones de puerto, entre otros.
 
 Una vez explicado lo que necesitamos y para que sirve pues **Manos a la obra**
@@ -88,7 +88,7 @@ app.set('port', process.env.PORT || 9090);
 
 ```
 
-##Ruta encriptar
+## Ruta encriptar ##
 
 
 Creamos una ruta llamada **encriptar** utilizando el método **GET** que recibe como parametro un nombre
@@ -139,7 +139,7 @@ app.listen(app.get('port'), () =>{
 ```
 
 
-##Middleware
+## Middleware ##
 
 Los middlewares se utilizan comúnmente en aplicaciones web para procesar y manipular las solicitudes del cliente antes de que lleguen a la capa de la aplicación principal, lo que permite realizar tareas como la validación de datos, la seguridad y la gestión de sesiones
 
@@ -174,13 +174,13 @@ function authenticateToken(req, res, next) {
 ```
 
 
-##Utilizando el middleware  authenticateToken##
+## Utilizando el middleware  authenticateToken ##
 
 
 Creamos una nueva ruta llamada **desencriptar** donde agregamos el **middleware** que creamos. El cual nos retornara el token ya **desencriptado** y lo podemos utilizar mediante el parametro **req.token**.
 
 
-##Descencriptando##
+## Descencriptando ##
 
 Mediante el método post creamos la ruta desencriptar pasandole el middleware el cual retorna el valor descencriptado
 
@@ -211,7 +211,7 @@ node index.js
 ![ejecutando](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/lgqy313clxmn4bbzrb9x.png)
 
 
-##Encriptando##
+## Encriptando ##
 
 Una vez corriendo el servidor utilizare **POSTMAN** para hacer pruebas.
 
@@ -223,7 +223,7 @@ Utilizamos el método get y como parámetro le envió un **nombre** en este caso
 Esto retorna el valor a encriptar y el **token** que se genera.
 
 
-##Desencriptando##
+## Desencriptando ##
 
 Para poder descencriptar necesitamos enviar el token que obtuvimos mediante el metodo get y lo enviamos en los headers con el metodo Authorization y el parametro Beared
 
@@ -236,4 +236,4 @@ Y eso es todo.
 
 Si tienen alguna sugerencia es bienvenida.
 
-##Sale bye##
+## Sale bye ##
