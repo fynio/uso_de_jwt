@@ -1,7 +1,7 @@
 
-# Hola a todos #
+# TUTORIAL DE JWT CON EXPRESS #
 
-Hola a todos hoy les traigo un minitutorial para poder utilizar JWT en Express y Node
+Hola a todos soy Rodrigo Garcia Trejo y  hoy les traigo un minitutorial para poder utilizar JWT en Express y Node
 
 ## Instalación ##
 
